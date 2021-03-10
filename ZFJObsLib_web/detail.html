@@ -1,0 +1,452 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="author" content="ZFJ_张福杰">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="baidu-site-verification" content="ij9nKTYw5E" />
+<!-- Joining Title -->
+<title>ZFJObsLib使用问答|iOS代码混淆|iOS马甲包混淆|字符串加密|ZFJ_张福杰|使用问答</title>
+<meta name="description" content="ZFJObsLib-iOS应用加固，字符串加密、代码逻辑混淆、符号混淆、反调试、代码混淆、马甲包混淆，源码编译即加密，降低应用破解风险。">
+<meta name="keywords" content="iOS应用加固,代码逻辑混淆,字符串加密,字符混淆,反调试,iOS加固,马甲包混淆,审核4.3,ios源码加密,ios代码混淆">
+<link rel="shortcut icon" href="http://zfjobslib.top/images/icon.png">
+
+<style type="text/css">
+                     
+body {
+	background-color: #F5F6F7;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 18px;
+	vertical-align: middle;
+	font-weight: normal;
+	color: #002047;
+}
+
+.content {
+	width: 100%;
+	margin: 0 auto;
+	/*border:1px solid #F00;*/
+}
+
+.content img {
+	width: 60%;
+	/*min-width: 150px;*/
+	/*border-radius: 10px;*/
+	/*border:1px solid #F00;*/
+	clear: both;
+    display: block;
+    margin: auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+h2 {
+	margin-left: 10px;
+}
+
+h3 {
+	margin-left: 20px;
+}
+
+h4 {
+	margin-left: 20px;
+	color: red;
+}
+
+p {
+	margin-left: 20px;
+}
+
+a {
+	color: blue;
+	text-decoration: none;
+}
+
+a:hover { 
+	color: red; 
+}
+
+.code_part {
+	background-color: #000;
+	color: #fff;
+	margin-left: 20px;
+}
+
+.code_part_div {
+	background-color: #000;
+	color: #fff;
+	margin-left: 20px;
+	border-radius: 10px;
+}
+
+</style>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?fcd307a929b7fca25fe2e31389a1278f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</head>
+
+<body>
+
+	<div class="content">
+
+	<h1>ZFJObsLib-iOS代码混淆软件</h1>
+
+	<h2>前言</h2>
+
+	<p>今天主要想说的是iOS的代码混淆，为什么想做代码混淆？为了APP的安全，为了防止别人破壳轻易破解我们代码；还有就是做马甲包了，我们知道马甲包的市场需求很大，但是不能花费过多的精力在开发上，毕竟只是个马甲，没必要花费太多的成本！</p>
+
+	<h2>混淆工具</h2>
+
+	<p>网上搜了一下，开源免费的混淆都在转载念茜大姐大的sh脚本的混淆方法，或者在念茜的脚本基础上二次开发，大家去看过就知道念茜的这篇博客是在14年写的，那时我刚做iOS没多久?，而且那时候中国区审核还没有那么严格，若果你现在还使用那种方法进行混淆，你肯定会收到苹果的2.3.1 大礼包?，所以我们还是探索别的混淆方法吧，不要再挖坟了！</p>
+
+	<p>ZFJObsLib主要是通过Python写的混淆工具，具体功能有方法混淆、属性混淆、类名混淆、添加垃圾代码、自动创建垃圾类、删除注释、修改资源文件Hash值、加密字符串、翻新资源名、模拟人工混淆、混淆文件名、混淆文件目录、混淆词库、混淆日志、映射列表、敏感词过滤、图片压缩、爬虫服务、修改项目名、翻新项目UUID、自动备份混淆项目、自定义忽略属性、自定义忽略函数、自定义忽略类名、界面颜色魔改、APP图片主题色替换，具体的如下：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200911233845235.png"></p>
+
+	<h2>软件界面</h2>
+
+	<p>ZFJObsLib混淆工具全面支持OC与Swift语言开发的项目！！！</p>
+
+	<p>（1）官网地址：</p>
+
+	<p><a href="http://zfjobslib.top" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://zfjobslib.top</a></p>
+
+	<p>（2）下载地址：</p>
+
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://gitee.com/zfj1128/ZFJObsLib_dmg" target="_Blank">https://gitee.com/zfj1128/ZFJObsLib_dmg（主更新地址）</a></p>
+
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/zfjsyqk/ZFJObsLib" target="_Blank">https://github.com/zfjsyqk/ZFJObsLib（备更新地址）</a></p>
+
+	<p>（3）使用问答：</p>
+
+	<p><a href="http://zfjobslib.top/qahelp.html" target="_Blank">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://zfjobslib.top/qahelp.html</a></p>
+
+	<p>ZFJObsLib软件的主要界面如下：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200911234433898.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200911234545858.png"></p>
+
+	<h2>混淆日志</h2>
+
+	<p>进行混淆的部分日志，混淆的时候会自动生成混淆日志《ZFJ混淆日志.log》，便于开发者修改部分报错，在混淆界面下方的《打开混淆日志》按钮打开：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200223125323332.png"></p>
+
+	<h2>忽略路径</h2>
+
+	<p>我们在混淆的时候，我们可以根据自己的实际情况选择需要忽略混淆的文件或者文件夹，所以我添加了混淆忽略文件和忽略文件功能，如下图：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912005228961.png"></p>
+
+	<p>特别说明：多级目录混淆情况，如果想忽略的目录在多个文件夹中有重名的，比如你想忽略Home下面的Models文件夹,但是在Home文件夹和Mine文件夹都有个Models文件夹，你可以这样设置'Home/Models'就OK了！So Easy!☝️☝️☝️</p>
+
+	<p>如果想过滤拥有相同前缀的类，比如ZFJ_TouchClass.h/ZFJ_TouchClass.m/ZFJ_MyButton.h/ZFJ_MyButton.m,可以设置‘ZFJ_+’就可以对以‘ZFJ_’开头的类进行过滤忽略；</p>
+
+	<p>如果想过滤拥有相同后缀的类，比如ZFJName.h/ZFJName.m/ABCName.h/ABCName.h,可以设置‘+Name’就可以对以‘Name’结尾的类进行过滤忽略。</p>
+
+	<h4>注意：很多人都在问，为什么我明明设置了忽略，为什么右边的日志还会打印被忽略的文件或者文件夹？需要注意的是，忽略只针对属性混淆、函数混淆、类名混淆才有用，忽略是不回去读取混淆原有的属性、函数、类名，但是并不意味着不去跑一边了！<br/><br/>
+	还有就是pod是无法混淆的，因为pod需要管理员权限才能修改，所以软件没有权限修改，如果想混淆，把pod里面的库拖进工程中！</h4>
+
+	<h2>使用问答</h2>
+
+	<p>在使用的时候要是有什么问题，可以先看看<a href="http://zfjobslib.top/qahelp.html" target="_Blank">《ZFJObsLib-iOS代码混淆软件使用问答（Q&A）》</a></p>
+
+	<p>在软件可以在系统栏-帮助-使用问答查看，如下图：</p>
+	
+	<p><img src="https://img-blog.csdnimg.cn/20200911235348898.png"></p>
+
+	<p>也可以在软件的菜单主界面，在帮助里面找到，如下图：</p>
+	
+	<p><img src="https://img-blog.csdnimg.cn/20200911235134689.png"></p>
+
+	<h2>软件功能</h2>
+
+	<p>✍️✍️✍️ZFJObsLib有很多功能，大家可以根据自己的实际使用情况自行选择！✍️✍️✍️</p>
+
+	<p>在此附上一些过包大佬常用的功能截图，仅供参考，这些大佬最牛逼的一个月过了三四十个，还有人一天一份代码混淆五次过了四个，一个是因为bug：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200911235611566.png"></p>
+
+	<h3>1.方法混淆</h3>
+
+	<p>如果混淆了系统的方法，可以在方法过滤里面手动添加需要过滤的方法，本人也统计了上百个常见的系统方法，但是肯定不能统计全面覆盖，所以如果遇到没有覆盖的用户可以手动添加设置！添加方法过滤在菜单界面-->属性/函数过滤</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912000428581.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190923100839900.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200710201710543.png"></p>
+
+	<h3>2.属性混淆</h3>
+
+	<p>如果你的命名和系统属性相同，导致系统属性被混淆，比如属性字段title和系统的一些控件的title一直，所以在混淆的过程中会把系统的属性给混淆了，导致报错，同样你可以再属性过滤中添加属性字段title（我已经添加好title这个字段了🤗），所以你遇到其他的情况你可以自己添加！</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/2020071020072035.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190923100905967.png"></p>
+
+	<h3>3.类名混淆</h3>
+
+	<p>类名混淆也会导致一些和系统重复，比如你的类名命名为‘TabBarController’，但是在系统中有一个UITabBarController,所以在类名混淆的时候就会导致混淆出错，通样你可以使用类名过滤的功能，当然一般类名混淆基本上是没错的！🎉🎉🎉</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190723110536529.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190723110724422.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190923100927376.png"></p>
+
+	<h3>4.添加垃圾代码</h3>
+
+	<p>在.h文件中暴露垃圾代码</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190726193611196.png"></p>
+
+	<p>垃圾代码的调用与实现</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190726193649211.png"></p>
+
+	<h3>5.创建垃圾类</h3>
+
+	<p>详细请看：<a href="https://zfj1128.blog.csdn.net/article/details/99086206" target="_Blank">《Python-ZFJObsLib完美生成iOS垃圾代码》</a></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190810165233635.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190810165407422.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20191006152447855.png"></p>
+
+	<h3>6.删除注释</h3>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190713131108898.png"></p>
+
+	<h3>7.敏感词过滤</h3>
+
+	<p>过滤博彩类敏感词</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190831151730345.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/201908311517463.png"></p>
+
+	<h3>8.修改Hash值</h3>
+
+	<p>针对项目中的资源文件，我们可以通过修改Hash的方式来进行混淆，运行如下：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200710202022347.png"></p>
+
+	<h3>9.加密字符串</h3>
+
+	<p>编译前的代码如下：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200710202709580.png"></p>
+
+	<p>加密混淆反编译前后Hopper对比如下：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190713224401830.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190713224417320.png"></p>
+
+	<p>我们可以看到再通过Hopper看不到硬编码了！</p>
+
+	<h3>10.翻新资源名</h3>
+
+	<p>找到工程中的图片资源并翻新，然后自动替换代码中的引用。</p>
+
+	<p>这里如果有图片加载不出来的情况，很大可能是你在代码中引用图片名是采用字符串拼接的方式，导致资源文件被修改了，但是代码中找不到无法修改的情况！🤓</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190723111352455.png"></p>
+
+	<h3>11.混淆工程目录</h3>
+
+	<p>为了保证目录混淆的准确性，建议把项目中空的目录都给删了；还有一种情况就是没有引用的文件夹也要删了，比如本地有这个目录但是项目没有引用！</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190724134544192.png"></p>
+
+	<h3>12.设置混淆前缀</h3>
+
+	<p>说明：设置混淆前缀，一定要点击保存哦！！！✌️✌️✌️还有就是可以设置方法混淆的后缀!</p>
+
+	<p>属性混淆、类名混淆和方法混淆支持只加前缀不修改原来名字的功能，只需要在设置的前缀后面加上‘#’就OK了，如下图：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912000712512.png"></p>
+
+	<h3>13.混淆词库</h3>
+
+	<p>ZFJObsLib自带二十多万的字典词库，所以不用担心代码重复问题；如果你觉得取得词库单词目标性不强或者无意思，你可以自定义词库，自定义词库解学视频如下：</p>
+
+	<p>链接:<a href=https://pan.baidu.com/s/1iBc1U-riqNEgVqbvCx8O7g target="_Blank">https://pan.baidu.com/s/1iBc1U-riqNEgVqbvCx8O7g</a>  密码:wadz</p>
+
+	<p>还可以通过读取混淆词库来读取其他项目的词库来混淆自己的项目，在混淆界面的系统栏-设置-词库选择-读取词库；</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912000902395.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912001013819.png"></p>
+
+	<h3>14.读取UUID功能 / 翻新项目UUID功能</h3>
+
+	<p>因为不知道Xcode的UUID详细生成规则，此项功能旨在从其他项目中读取UUID，方便创建垃圾类和修改UUID使用；在混淆的过程中如果使用了创建垃圾类和修改UUID的功能，建议最好使用此功能读取一个其他项目的UUID，以达到更真实的目的；最好的使用方法是用Xcode新建一个iOS项目，然后自己随便创建几个类或者试图，接着再此功能读取该新建项目的Xcodeproj来获取UUID；如果在混淆过程中使用到的UUID数量大于读取的UUID数量，则会先紧着读取的UUID使用，当读取的UUID使用完以后，ZFJObsLib会自动按照自己的规则创建UUID（不推荐）！</p>
+
+	<p>建议自己用Xcode创建一个项目，多创建几个类或者试图进行读取！</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912001141340.png"></p>
+
+	<p>翻新UUID效果对比图</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20191007143630176.png"></p>
+
+	<h3>15.自定义添加属性/方法/类名过滤字段</h3>
+
+	<p>就拿属性混淆为例，在混淆过程成，如果你的属性命名和系统的一些属性命名重复了，导致在混淆的过程中把系统的属性也给混淆了，导致报错不能运行，所以需要把这样的属性给过滤掉，ZFJObsLib也有添加好的一些系统过滤字段，但是考虑的项目的多变性和不可能全部添加，所以除了软件自带的一些过滤字段，用户也可以自己添加过滤字段，你也可以设置添加第三库的属性字段等等；方法和类目意义相同，这里就不做过多赘述了！！！</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912001240453.png"></p>
+
+	<h3>16.魔改界面控件（字体）颜色</h3>
+
+	<p>在审核过程中会审核你界面的UI，如果UI大面积相同肯定也是不行的，这里有个黑科技，是一键修改UI控件的背景颜色或者添加背景颜色，也可以修改字体的颜色！</p>
+
+	<p>效果对比如下：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20191113205735870.png"></p>
+
+	<p>颜色魔改支持魔改类型和参数的自定义（混淆界面-->设置-->界面颜色魔改配置），如下：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200316115403991.jpg"></p>
+
+	<h2>工具箱</h2>
+
+	<p>ZFJObsLib集成了几个工具，这些工具对混淆作用不大，仅供大家方便使用！</p>
+
+	<h3>1.爬虫工具</h3>
+
+	<p>详情请看?《Python-一键爬取图片、音频、视频资源》教学视频</p>
+	
+	<p>资源爬取：链接:<a href=https://pan.baidu.com/s/1xa9ruF_hMcN49716BJUx2w target="_Blank">https://pan.baidu.com/s/1xa9ruF_hMcN49716BJUx2w</a>  密码:1zpg</p>
+
+	<p>节点爬取：链接:<a href=https://pan.baidu.com/s/1ebWWYtjoKkiH9mqakR6EMQ target="_Blank">https://pan.baidu.com/s/1ebWWYtjoKkiH9mqakR6EMQ</a>  密码:cosa</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912004754642.png"></p>
+
+	<h3>2.图片压缩工具</h3>
+
+	<p>ZFJObsLib集成图片压缩工具，支持一键生成iOS开发三套图标，也支持自定义压缩尺寸，还可以移除Alpha通道，转成RGB图片模式；实现逻辑可参考：<a href=https://zfj1128.blog.csdn.net/article/details/94625153 target="_Blank">《Python-批量压缩处理图片（批量生成@1x, @2x, @3x）》</a></p>
+
+	<p>具体如下图：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912004844675.png"></p>
+
+	<h3>3.资源清理工具</h3>
+
+	<p>在iOS项目开发的过程中，如果版本迭代开发的时间比较长，那么在很多版本开发以后或者说有多人开发参与以后，工程中难免有一些垃圾资源，未被使用却占据着api包的大小！</p>
+
+	<p>这里我通过Python脚本来查找项目中未被使用的图片、音频、视频资源，然后删除掉；以达到减小APP包大小的目的！</p>
+
+	<p>详细请看：<a href=https://zfj1128.blog.csdn.net/article/details/99290441 target="_Blank">《Python-一键查找iOS项目中未使用的图片、音频、视频资源》</a></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200223131523607.png"></p>
+
+	<h3>4.翻译助手</h3>
+
+	<p>自动翻译关键词和描述，详细请看《ZFJObsLib-iOS马甲包多语言自动翻译软件》</p>
+
+	<p>如下图：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912005115679.png"></p>
+
+	<h3>5.代码前缀替换工具</h3>
+
+	<p>可以批量替换项目中的属性前缀、函数前缀、类名前缀，当然前提是你已经设置了前缀！</p>
+
+	<p>如下图：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/2020091200500757.png"></p>
+
+	<h3>6.图片颜色替换</h3>
+
+	<p>我们在混淆项目的时候想把项目的图片的主题色全部替换了，一般都是找美工重新做一套图，很是不方便，本软件还可以一键替换主题色；或者把所有图片的所有颜色只改为一种颜色！</p>
+
+	<p>如下图：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912001610314.png"></p>
+
+	<p>a.指定图片的某个颜色A修改成颜色B，就是你吸取某个颜色“#D4237A”修改成“#14CB90”，如下图：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/2020091200204777.jpeg"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912002118993.jpeg"></p>
+
+	<p>a.把全部图片的所有颜色改成颜色B，就是把你选择的目录里面的所有图片都修改成一种颜色，如下图：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912002255570.PNG"></p>
+
+	<h3>7.资源下载助手</h3>
+
+	<p>基于youget的视频资源下载助手！</p>
+
+	<p>如下图：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200710203236169.png"></p>
+
+	<h2>混淆示例</h2>
+
+	<p>这个项目是某位群友提供的swift项目！</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20190911182613221.jpg"></p>
+
+	<p>QQ空间里面大量的过包记录不是吹出来的，都是网友的真实反馈记录，大家可以加我QQ看，新会员我是不发的：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200710210006230.png"></p>
+
+	<p>一下是某一个会员的过包记录：</p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912002422903.png"></p>
+
+	<p><img src="https://img-blog.csdnimg.cn/20200912002515340.png"></p>
+
+	<h2>其他</h2>
+	
+	<p>官网地址：<a href=http://zfjobslib.top target="_Blank">http://zfjobslib.top</a></p>
+	
+	<p>博客地址：<a href=http://zfj1128.blog.csdn.net target="_Blank">http://zfj1128.blog.csdn.net</a></p>
+	
+	<p>使用问答：<a href=http://zfjobslib.top/qahelp.html target="_Blank">http://zfjobslib.top/qahelp.html</a></p>
+
+	<p>详细说明：<a href=http://zfjobslib.top/detail.html target="_Blank">http://zfjobslib.top/detail.html</a></p>
+
+	<p>下载地址：<a href="https://gitee.com/zfj1128/ZFJObsLib_dmg">https://gitee.com/zfj1128/ZFJObsLib_dmg</a></p>
+
+	<p></p>
+
+	<p> </p>
+
+
+
+
+	
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
